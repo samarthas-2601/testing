@@ -47,6 +47,39 @@
       <h3 class="slogan">5th June : 81</h3>
       <h3 class="slogan">6th June : 83</h3>
       <h3 class="slogan">7th June : 81</h3>
+      
+       <br />
+      <br />
+      
+      
+      <?php
+// Get the current date
+$currentDate = date('d-m-Y');
+
+// Create an array to store the values
+$values = array(101, 304, 505, 33, 21);
+
+// Display the table
+echo '<table>';
+echo '<tr><th>Date</th><th>Value</th></tr>';
+
+for ($i = 0; $i < 5; $i++) {
+    // Calculate the date
+    $date = date('d-m-Y', strtotime($currentDate . ' + ' . $i . ' days'));
+
+    // Get the corresponding value
+    $value = $values[$i];
+
+    // Display the row
+    echo '<tr><td>' . $date . '</td><td>' . $value . '</td></tr>';
+}
+
+echo '</table>';
+?>
+      
+       <br />
+      <br />
+
 
       <div class="fas fa-cog nut1"></div>
       <div class="fas fa-cog nut2"></div>
